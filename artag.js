@@ -1,7 +1,8 @@
-//Вызов функции
+/* Вызов функции
 if (document.querySelector('#ar-inter')) {
     arInter('#ar-inter', 2560, 2005);
 }
+*/
 
 function arInter(doc, widthImage, heightImage) {
 
