@@ -93,7 +93,7 @@
   При необходимости настраиваем остальные метки (.ar-btn1, .ar-btn2, ..., .ar-btn49, .ar-btn50).
 
 ```css
-#ar-inter .ar-img .ar-btn5 {
+#ar-inter .ar-img .ar-btn1 {
     left: 27%;
     bottom: 70%;
 }
