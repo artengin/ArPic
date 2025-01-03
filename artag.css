@@ -1,0 +1,212 @@
+
+.ar-inter-block{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+}
+
+.ar-inter-block .left {
+    width: 62%;
+}
+
+.ar-inter-block .ar-img {
+    width: 100%;
+    border-radius: 10px;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    position: relative;
+    transition: all ease-out 1s;
+}
+
+.ar-inter-block .right {
+    width: 35%;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ar-inter-block .ar-btn-title {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.ar-inter-block .block-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.ar-inter-block .ar-btn-title button {
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 16px;
+    border: 1px solid #000;
+    display: block;
+    margin: 2px 4px;
+    padding: 8px 8px 6px;
+    line-height: 12px;
+    cursor: pointer;
+}
+
+.ar-inter-block .ar-btn-title .ar-btn0 {
+    position: relative;
+    padding: 13px;
+    border-radius: 50%;
+}
+
+.ar-inter-block .ar-btn-title .ar-btn0::after {
+    content: '→';
+    position: absolute;
+    color: #333;
+    top: 25%;
+    left: 12%;
+    width: 20px;
+}
+
+.ar-inter-block .ar-img span::before{
+    position: absolute;
+    background: #fff;
+    color: #333;
+    padding: 4px 5px 3px;
+    font-size: 13px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s;
+    opacity: 0;
+    top: -23px;
+    left: 23px;
+}
+
+.ar-inter-block .ar-img span:hover::before{
+    opacity: 1;
+    transition: all 0.8s;
+}
+
+.ar-inter-block.ar-active .ar-img span:hover::before{
+    opacity: 0;
+}
+
+.ar-inter-block.ar-active .ar-btn-title .ar-btn0 {
+    background: #333;
+    color: #fff;
+}
+
+.ar-inter-block.ar-active .ar-btn-title .ar-btn0::after {
+    content: 'x';
+    position: absolute;
+    top: 22%;
+    font-size: 18px;
+    left: 11%;
+    color: #fff;
+    width: 20px;
+}
+
+.ar-inter-block .ar-btn-title button:hover {
+    background: #bababa;
+}
+
+.ar-inter-block .ar-btn-title .ar-active {
+    background: #333;
+    color: #fff;
+}
+
+.ar-inter-block .ar-btn-title .ar-active:hover {
+    background: #333;
+    color: #fff;
+}
+
+.ar-img span {
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 39%);
+    height: 25px;
+    width: 25px;
+    box-sizing: border-box;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+.ar-btn0 span {
+    display: block !important;
+}
+
+.ar-img .ar-active {
+    display: block;
+    left: 90% !important;
+    bottom: 90% !important;
+}
+
+.ar-img .ar-active::after {
+  content: "\2014";
+  bottom: 1.5px;
+  left: 11%;
+  font-size: 19px;
+}
+
+.ar-img span:hover,
+.ar-img span:focus {
+    background: rgb(0 0 0 / 72%);
+}
+
+.ar-img span:after {
+    content: "+";
+    position: absolute;
+    bottom: -8%;
+    left: 23%;
+    font-size: 23px;
+    color: #fff;
+    opacity: 1;
+    font-style: normal;
+}
+
+.ar-inter-block  .ar-desc div {
+    display: none;
+}
+
+.ar-inter-block  .ar-desc .ar-btn0 {
+    display: block;
+}
+
+.ar-inter-block.ar-active  .ar-desc .ar-btn0 {
+    display: none;
+}
+
+.ar-inter-block  .ar-desc .ar-active {
+    display: block;
+}
+
+.ar-inter-block .ar-btn-title button:hover {
+    background: rgb(0, 0, 0, 20%);
+}
+
+@media (max-width: 992px) {
+    .ar-inter-block {
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+    
+    .ar-inter-block .left,
+    .ar-inter-block .right {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .ar-img .ar-active {
+        display: block;
+        left: 85% !important;
+        bottom: 85% !important;
+    }
+}
