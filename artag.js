@@ -1,11 +1,6 @@
 //Вызов функции
 if (document.querySelector('#ar-inter')) {
     arInter('#ar-inter', 2560, 2005);
-    arInter('#ar-inter1', 2560, 2005);
-    arInter('#ar-inter2', 2560, 2005);
-    arInter('#ar-inter3', 2560, 2005);
-    arInter('#ar-inter4', 2560, 2005);
-    arInter('#ar-inter5', 2560, 2005);
 }
 
 function arInter(doc, widthImage, heightImage) {
@@ -20,13 +15,12 @@ function arInter(doc, widthImage, heightImage) {
         }
     }
 
-    //Подключение к DOM
     let arBtnImgArray = [];
     let arBtnTitleArray = [];
     let arDescArray = [];
     let newHeight;
 
-
+    //Подключение к DOM
     const arInterBlock = document.querySelector(doc);
     const arImg = arInterBlock.querySelector('.ar-img');   
     arImg.className = arrClassName[0] + ' ar-img';
@@ -49,7 +43,7 @@ function arInter(doc, widthImage, heightImage) {
         addClassBtnImg(arDescArray);
     }
     
-    //Устанавливаем классы и обработчик событий кнопкам на изображении 
+    //Устанавливаем классы и обработчик событий меткам на изображении 
     function addClassBtnImg(btns) {
         let n = 0;
         if (btns == arBtnImgArray) {
