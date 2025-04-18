@@ -4,14 +4,14 @@ if (document.querySelector('#ar-inter')) {
 }
 */
 
-function arInter(doc, widthImage, heightImage) {
+function arInter(doc, widthImage, heightImage, countLabels = 50) {
 
     //Создаем классы для кнопок на изображении
     let arrClassName = [];
     createClassBtnImg();
 
     function createClassBtnImg() {
-        for (let i = 0; i < 51; i++) {
+        for (let i = 0; i <= countLabels; i++) {
             arrClassName.push('ar-btn' + i);
         }
     }
